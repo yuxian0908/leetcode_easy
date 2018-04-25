@@ -2,10 +2,10 @@ package leetcode;
 
 public class RunCode {
 	public static void main(String[] args) {
-		ReverseVowelsofaString test = new ReverseVowelsofaString();
+		FindAllAnagramsinaString test = new FindAllAnagramsinaString();
 	    System.out.println("test code");
-	    System.out.println(test.reverseVowels("abcdefghi"));
+	    System.out.println(test.findAnagrams("abccccabdd","abc"));
 //	    test.reverseString("merge");
-		  
+		   
 	 }
 }
