@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class RunCode {
 	public static void main(String[] args) {
-		IntersectionofTwoLinkedLists test = new IntersectionofTwoLinkedLists();
+		PalindromeLinkedList test = new PalindromeLinkedList();
 	    System.out.println("test code");
 	    
-	    int[] Ary1= new int[] {1,3,5,7,9,11,13,15,17,19,21};
+	    int[] Ary1= new int[] {1,2,1,2,3,3,2,1,2,1};
 	    int[] Ary2= new int[] {2};
 	    
 	    ListNode test1= new ListNode(0);
@@ -24,12 +24,8 @@ public class RunCode {
 	    	temp2.next = new ListNode(i);
 	    	temp2 = temp2.next;
 	    }
-	    System.out.println(test1);
-	    System.out.println(test2);
-
-	    System.out.println("===================");
 	    
-	    System.out.println(test.getIntersectionNode(test1.next,test2.next).toString());
+	    System.out.println(test.isPalindrome(test1.next));
 	 }
 }
 
@@ -37,8 +33,7 @@ class ListNode {
 	int val;
 	ListNode next;
 	ListNode(int x) { 
-		val = x; 
-		next = null;
+		val = x;
 	}
 	
 	public boolean hasNext() {
