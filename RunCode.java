@@ -4,26 +4,42 @@ import java.util.Arrays;
 
 public class RunCode {
 	public static void main(String[] args) {
-		RemoveDuplicatesfromSortedList test = new RemoveDuplicatesfromSortedList();
+		IntersectionofTwoLinkedLists test = new IntersectionofTwoLinkedLists();
 	    System.out.println("test code");
 	    
-	    ListNode test1= new ListNode(6);
-	    test1.next = new ListNode(6);
-	    test1.next.next = new ListNode(8);
-	    test1.next.next.next = new ListNode(8);
-	    test1.next.next.next.next = new ListNode(9);
-	    ListNode test2= new ListNode(3);
-	    test2.next = new ListNode(4);
-	    test2.next.next = new ListNode(5);
+	    int[] Ary1= new int[] {1,3,5,7,9,11,13,15,17,19,21};
+	    int[] Ary2= new int[] {2};
 	    
-	    System.out.println(test.deleteDuplicates(test1).toString());
+	    ListNode test1= new ListNode(0);
+	    ListNode test2= new ListNode(0);
+
+	    ListNode temp1= test1;
+	    ListNode temp2= test2;
+	    
+	    for(int i:Ary1) {
+	    	temp1.next = new ListNode(i);
+	    	temp1 = temp1.next;
+	    }
+	    for(int i:Ary2) {
+	    	temp2.next = new ListNode(i);
+	    	temp2 = temp2.next;
+	    }
+	    System.out.println(test1);
+	    System.out.println(test2);
+
+	    System.out.println("===================");
+	    
+	    System.out.println(test.getIntersectionNode(test1.next,test2.next).toString());
 	 }
 }
 
 class ListNode {
 	int val;
 	ListNode next;
-	ListNode(int x) { val = x; }
+	ListNode(int x) { 
+		val = x; 
+		next = null;
+	}
 	
 	public boolean hasNext() {
 		return this.next!=null;
