@@ -1,31 +1,25 @@
 package leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class RunCode {
 	public static void main(String[] args) {
-		PalindromeLinkedList test = new PalindromeLinkedList();
+		ValidParentheses test = new ValidParentheses();
 	    System.out.println("test code");
 	    
-	    int[] Ary1= new int[] {1,2,1,2,3,3,2,1,2,1};
-	    int[] Ary2= new int[] {2};
-	    
-	    ListNode test1= new ListNode(0);
-	    ListNode test2= new ListNode(0);
-
-	    ListNode temp1= test1;
-	    ListNode temp2= test2;
-	    
-	    for(int i:Ary1) {
-	    	temp1.next = new ListNode(i);
-	    	temp1 = temp1.next;
-	    }
-	    for(int i:Ary2) {
-	    	temp2.next = new ListNode(i);
-	    	temp2 = temp2.next;
-	    }
-	    
-	    System.out.println(test.isPalindrome(test1.next));
+//	    int[] Ary1= new int[] {3,2,8,5,7,0};
+//	    
+//	    ListNode test1= new ListNode(0);
+//
+//	    ListNode temp1 = test1;
+//	    
+//	    for(int i:Ary1) {
+//	    	temp1.next = new ListNode(i);
+//	    	temp1 = temp1.next;
+//	    }
+//	    System.out.println(test1.next.toString());
+	    System.out.println(test.isValid("[{[)}]"));
 	 }
 }
 
@@ -42,10 +36,19 @@ class ListNode {
 	public String toString(){
 		ListNode temp = this;
 		String result = ""+this.val;
+
 		while(temp.hasNext()) {
 			temp = temp.next;
 			result = result+"->"+temp.val;
 		}
 		return result;
 	}
+}
+
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
 }
