@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class RunCode {
 	public static void main(String[] args) {
-		ValidParentheses test = new ValidParentheses();
+		MergeTwoBinaryTrees test = new MergeTwoBinaryTrees();
 	    System.out.println("test code");
 	    
 //	    int[] Ary1= new int[] {3,2,8,5,7,0};
@@ -19,7 +19,19 @@ public class RunCode {
 //	    	temp1 = temp1.next;
 //	    }
 //	    System.out.println(test1.next.toString());
-	    System.out.println(test.isValid("[{[)}]"));
+	    
+	    TreeNode test1 = new TreeNode(10);
+	    test1.left = new TreeNode(7);
+	    test1.left.left = new TreeNode(3);
+	    test1.left.right = new TreeNode(8);
+	    test1.right = new TreeNode(12);
+	    
+	    TreeNode test2 = new TreeNode(7);
+	    test2.left = new TreeNode(3);
+	    test2.right = new TreeNode(8);
+	    test2.right.left = new TreeNode(8);
+	    
+	    System.out.println(test.mergeTrees(test1,test2));
 	 }
 }
 
