@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class RunCode {
 	public static void main(String[] args) {
-		MergeTwoBinaryTrees test = new MergeTwoBinaryTrees();
+		HouseRobber test = new HouseRobber();
 	    System.out.println("test code");
 	    
 //	    int[] Ary1= new int[] {3,2,8,5,7,0};
@@ -22,16 +22,16 @@ public class RunCode {
 	    
 	    TreeNode test1 = new TreeNode(10);
 	    test1.left = new TreeNode(7);
+	    test1.right = new TreeNode(12);
 	    test1.left.left = new TreeNode(3);
 	    test1.left.right = new TreeNode(8);
-	    test1.right = new TreeNode(12);
 	    
 	    TreeNode test2 = new TreeNode(7);
 	    test2.left = new TreeNode(3);
 	    test2.right = new TreeNode(8);
 	    test2.right.left = new TreeNode(8);
 	    
-	    System.out.println(test.mergeTrees(test1,test2));
+	    System.out.println(test.rob(new int[] {5,1,2,6}));
 	 }
 }
 
